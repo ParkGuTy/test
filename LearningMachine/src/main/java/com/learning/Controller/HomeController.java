@@ -1,7 +1,12 @@
 package com.learning.Controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.learning.DTO.userDTO;
 
 @Controller
 public class HomeController {
@@ -26,6 +31,12 @@ public class HomeController {
 	@GetMapping(value = "/practice3")
 	public String practice3() {
 		return "practice3";
+	}
+	@PostMapping(value = "/login")
+	public String login(HttpServletRequest request) {
+		userDTO dto = new userDTO();
+		
+		return "";
 	}
 	
 	@GetMapping(value = "/login")

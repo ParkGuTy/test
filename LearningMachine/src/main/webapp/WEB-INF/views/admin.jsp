@@ -33,6 +33,38 @@
 <link href="./resources/css/style.css" rel="stylesheet">
 <link href="./resources/css/admin.css" rel="stylesheet">
 
+<style type="text/css">
+    <style>@font-face {
+        font-family: 'LeferiPoint-WhiteObliqueA';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    body {
+        font-family: LeferiPoint-WhiteObliqueA;
+    }
+
+    details {
+        border-bottom: 1px solid #efefef;
+        color: #666;
+        font-size: 16px;
+        padding: 15px;
+    }
+
+
+    details[open] summary {
+        font-weight: 800;
+    }
+
+    details > summary {
+        color: white;
+        font-size: 17px;
+        padding: 15px 0;
+    }
+</style>
+
+
 
 </head>
 
@@ -49,35 +81,37 @@
 
 
 		<jsp:include page="./header.jsp" />
-		<div class="adminform">
-			<div class="navbar2">
-				<h2 style="text-align: center">관리자</h2>
-				<div class="nav-item dropdown">
-					<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">회원관리</a>
-					<div class="dropdown-menu m-0">
-						<a href="feature.html" class="dropdown-item">회원리스트</a> 
-						<a href="quote.html" class="dropdown-item">신고리스트</a> 
-						<a href="team.html" class="dropdown-item">1</a> 
-						<a href="testimonial.html" class="dropdown-item">2</a> 
-					</div>
-				</div>
-				<div class="nav-item dropdown">
-					<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">강사관리</a>
-					<div class="dropdown-menu m-0">
-						<a href="feature.html" class="dropdown-item">강사리스트</a> 
-						<a href="quote.html" class="dropdown-item">강의신청목록</a> 
-					</div>
-				</div>
-				<div class="nav-item dropdown">
-					<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">매출관리</a>
-					<div class="dropdown-menu m-0">
-						<a href="feature.html" class="dropdown-item">월매출액</a> 
-						<a href="quote.html" class="dropdown-item">강의별매출</a> 
-					</div>
+		
+		<div style="padding-top: 100px;">
+		 <div class="card bg-dark text-white" style="border-radius: 1rem;margin-left:50px; height: 800px; width: 250px;">
+
+				<div class="card-body p-5 text-left">
+					<h5 style="text-align: left; color: white;">관리자</h5>
+					<details>
+    					<summary>회원관리</summary>
+    						<a href="#">회원</a> <br>
+    						<a href="#">강사</a> <br>
+    						<a href="#">신고</a> <br>
+					</details>
+					<details>
+    					<summary>결제관리</summary>
+    						<a href="#">결제</a> <br>
+    						<a href="#">환불</a> <br>
+    						<a href="#">매출관리</a> <br>   	 					
+   	 				</details>
+					<details>
+    					<summary>게시판관리</summary>
+    						<a href="#">공지사항</a> <br>
+    						<a href="#">FAQ</a> <br>
+    						<a href="#">커뮤니티</a> <br>   	 					
+   	 				</details>
 				</div>
 			</div>
-		</div>
+		 
+		 </div>
 		
+	
+	</div>
 
 
 
@@ -86,10 +120,23 @@
 
 
 		<!-- Back to Top -->
-		<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i
-			class="bi bi-arrow-up"></i></a>
-	</div>
+		<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
+	<script type="text/javascript">
+	$('body > ul > li').click(function() {
+	    if ( $(this).hasClass('active') ) {
+	        $(this).find(' > ul').stop().slideUp(300);
+	        $(this).removeClass('active');
+	    }
+	    else {
+	        $(this).find(' > ul').stop().slideDown(300);
+	        $(this).addClass('active');
+	    }
+	});
+	
+	
+	</script>
+	
 	<!-- JavaScript Libraries -->
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -100,6 +147,8 @@
 
 	<!-- Template Javascript -->
 	<script src="./resources/js/main.js"></script>
+	
+	
 </body>
 
 </html>
