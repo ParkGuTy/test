@@ -10,7 +10,12 @@ public class HomeController {
 	public String index() {
 		return "index";
 	}
-
+	
+	@GetMapping(value = "/404")
+	public String error404() {
+		return "404";
+	}
+	
 	@GetMapping(value = "/contact")
 	public String contact() {
 		return "contact";

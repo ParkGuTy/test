@@ -1,11 +1,15 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 <meta charset="utf-8">
 <title>Learning Machine</title>
+<link href="./css/notice.css" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta content="" name="keywords">
 <meta content="" name="description">
@@ -49,16 +53,53 @@
 
 
 		<jsp:include page="./header.jsp" />
+		<div style="padding-top: 100px;">
+		 <div class="card bg-dark text-white" style="border-radius: 1rem;margin-left:50px; height: 800px; width: 250px;">
+				<div class="card-body p-5 text-left">
+					<h5 style="text-align: left; color: white;">관리자</h5>
+					<details>
+    					<summary>회원관리</summary>
+    						<a href="#">회원</a> <br>
+    						<a href="#">강사</a> <br>
+    						<a href="#">신고</a> <br>
+					</details>
+					<details>
+    					<summary>결제관리</summary>
+    						<a href="#">결제</a> <br>
+    						<a href="#">환불</a> <br>
+    						<a href="#">매출관리</a> <br>   	 					
+   	 				</details>
+					<details>
+    					<summary>게시판관리</summary>
+    						<a href="#">공지사항</a> <br>
+    						<a href="#">FAQ</a> <br>
+    						<a href="#">커뮤니티</a> <br>   	 					
+   	 				</details>
+				</div>
+			</div>
 		
-		<div>
-			
-		
-		
-		
-		</div>
-
-
-
+	<div style="padding-top: 100px;">
+	<div style="padding-left: 26%;">
+		<table>
+			<tr>
+				<th id="r1">번호</th>
+				<th id="r3">제목</th>
+				<th id="r3">작성자</th>
+				<th id="r1">조회수</th>
+				<th id="r2">작성일</th>
+			</tr>
+			<%-- <c:forEach items="${notice }" var="n"> --%>
+			<tr>
+				<th id="r1">1</th>
+				<th id="r3">2</th>
+				<th id="r3">3</th>
+				<th id="r1">4</th>
+				<th id="r2">4</th>
+			</tr>
+			<%-- </c:forEach> --%>
+		</table>  	
+	</div>
+	</div>
 		<%-- <jsp:include page="./team.jsp"/> --%>
 		<jsp:include page="./footer.jsp" />
 

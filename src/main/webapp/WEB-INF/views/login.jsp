@@ -66,11 +66,11 @@
               <p class="text-white-50 mb-5">Please enter your login and password!</p>
 			<form action="./login" method="post">
               <div class="form-outline form-white mb-4">
-                <input type="text" id="id" class="form-control form-control-md" placeholder="ID를 입력해주세요."/>
+                <input type="text" id="id" name="id" class="form-control form-control-md" placeholder="ID를 입력해주세요." required="required"/>
               </div>
 
               <div class="form-outline form-white mb-4">
-                <input type="password" id="pw" class="form-control form-control-md" placeholder="PW를 입력해주세요."/>
+                <input type="password" id="pw" name="pw" class="form-control form-control-md" placeholder="PW를 입력해주세요." required="required"/>
               </div>
 
               <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
