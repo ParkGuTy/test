@@ -38,6 +38,7 @@
 
 <!-- Template Stylesheet -->
 <link href="./resources/css/style.css" rel="stylesheet">
+<link href="./resources/css/admin.css" rel="stylesheet">
 
 </head>
 <style type="text/css">
@@ -82,6 +83,34 @@
 	vertical-align: top;
 	
 }
+<style>@font-face {
+        font-family: 'LeferiPoint-WhiteObliqueA';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    body {
+        font-family: LeferiPoint-WhiteObliqueA;
+    }
+
+    details {
+        border-bottom: 1px solid #efefef;
+        color: #666;
+        font-size: 16px;
+        padding: 15px;
+    }
+
+
+    details[open] summary {
+        font-weight: 800;
+    }
+
+    details > summary {
+        color: white;
+        font-size: 17px;
+        padding: 15px 0;
+    }
 </style>
 <body>
 	<div class="container-xxl bg-white p-0">
@@ -98,8 +127,43 @@
 
 		<jsp:include page="./header.jsp" />
 		<div style=" width: 100%; height: 800px; padding-top: 90px;">
-		<div style="width: 20%; height: 800px; float:left; background-color:green;"></div>
-		<div style="padding-top: 50px;"><h3>&nbsp;&nbsp;강의신청</h3><hr style="border: solid 1px;"></div>
+			<div style="padding-top: 5px;">
+				<div class="card bg-dark text-white"
+					style="width: 20%; height: 801px; float: left;">
+
+					<div class="card-body p-5 text-left">
+						<h5 style="text-align: left; color: white;">관리자</h5>
+						<details>
+							<summary>회원관리</summary>
+							<a href="#">회원</a>
+							<br>
+							<a href="#">강사</a>
+							<br>
+							<a href="#">신고</a>
+							<br>
+						</details>
+						<details>
+							<summary>결제관리</summary>
+							<a href="#">결제</a>
+							<br>
+							<a href="#">환불</a>
+							<br>
+							<a href="#">매출관리</a>
+							<br>
+						</details>
+						<details>
+							<summary>게시판관리</summary>
+							<a href="#">공지사항</a>
+							<br>
+							<a href="#">FAQ</a>
+							<br>
+							<a href="#">커뮤니티</a>
+							<br>
+						</details>
+					</div>
+				</div>
+			</div>
+			<div style="padding-top: 50px;"><h3>&nbsp;&nbsp;강의신청</h3><hr style="border: solid 1px;"></div>
 		<div style="padding-top: 10px; text-align: center;">
 			<h5>■개인정보처리방침</h5>
 			<textarea style="width: 900px; height: 200px;" rows="" cols="">< Learning Machine >('www.Learning Machine.com'이하 'Learning Machine')은(는) 「개인정보 보호법」 제30조에 따라 정보주체의 개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보 처리방침을 수립·공개합니다.
@@ -216,6 +280,17 @@
 		<!-- Back to Top -->
 		<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i
 			class="bi bi-arrow-up"></i></a>
+		<script type="text/javascript">
+			$('body > ul > li').click(function() {
+				if ($(this).hasClass('active')) {
+					$(this).find(' > ul').stop().slideUp(300);
+					$(this).removeClass('active');
+				} else {
+					$(this).find(' > ul').stop().slideDown(300);
+					$(this).addClass('active');
+				}
+			});
+		</script>
 	</div>
 
 	<!-- JavaScript Libraries -->
