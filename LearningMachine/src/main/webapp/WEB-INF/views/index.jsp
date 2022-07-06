@@ -272,7 +272,7 @@
                         <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
                         <p>ㅇㅅㅇ소감~ </p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-2.jpg">
+                           <a href="https://github.com/Hijineee"><img class="img-fluid flex-shrink-0 rounded-circle" src="./resources/img/testimonial-2.jpg"></a>
                             <div class="ps-3">
                                 <h6 class="mb-1">이희진</h6>
                                 <small>개발자</small>
